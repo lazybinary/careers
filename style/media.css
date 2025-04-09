@@ -1,0 +1,28 @@
+@media (max-width: 1240px) {
+  .text-70 {
+    font-size: 60px !important;
+  }
+  .text-35 {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-70 {
+    font-size: 43px !important;
+  }
+  .mb-32 {
+    margin-bottom: 25px;
+  }
+  .text-35 {
+    font-size: 28px !important;
+  }
+}
+@media (max-width: 640px) {
+  .text-70 {
+    font-size: 33px !important;
+  }
+  .text-35 {
+    font-size: 23px !important;
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: gray;
+        }
+
+        .swiper {
+            width: 100%;
+            margin: auto;
+            padding: 20px 0px 90px 0px;
+        }
+
+        .swiper-wrapper {
+            align-items: center;
+        }
+
+        .swiper-slide {
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 300px;
+            display: block;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            margin: 0 6px !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #fff;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=1" alt="Image 1">
+            </div>
+            <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=2" alt="Image 2"></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=3" alt="Image 3"></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=4" alt="Image 4"></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=5" alt="Image 5"></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=6" alt="Image 6"></div>
+        </div>
+        <!-- Optional navigation -->
+        <div class="swiper-pagination mt-15"></div>
+    </div>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }, breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                }
+            }
+
+        });
+    </script>
+
+    <!-- bootstarp -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
